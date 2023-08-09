@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url("https://www.universetoday.com/wp-content/uploads/2011/06/ATV-leaves-station.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.solar-earth{
+    height: 250px;
+    width: 250px;
+    background: #000;
+    position: relative;
+    border-radius: 50%;
+    border-left: 5px solid red;
+    border-width:1px;
+    animation: system 10s linear infinite;
+}
+
+.solar-earth::after{
+    content: "";
+    height: 60px;
+    width: 60px;
+    background:transparent;
+    left: 90px;
+    top: -35px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    border-top: 2px solid #fff;
+    animation: system 4s linear infinite;
+
+}
+
+.solar-earth::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    background:aqua;
+    position: absolute;
+    top: -20px;
+    right:110px;
+    border-radius: 50%;
+}
+
+.sun{
+    height: 100px;
+    width: 100px;
+    background:yellow;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 29px -5px rgba(247,247,0,1);
+    -moz-box-shadow: 0px 0px 29px -5px rgba(247,247,0,1);
+    box-shadow: 0px 0px 29px -5px rgba(247,247,0,1);
+    transition: all 03s ease;
+
+}
+
+@keyframes system{
+    to{
+        transform: rotate(360deg);
+}
+}
